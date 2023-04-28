@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-heading {
+  font-family: 'Alex Brush', cursive;
+  @apply text-[#171717];
+}
+
+.font-body {
+  font-family: 'Lora', serif;
+}
+
+.text-dark {
+  @apply text-[#171717];
+}
+
+body {
+  font-family: 'Lora', serif;
+  @apply text-gray-700;
+}
+
+@keyframes homeLeafAnimation {
+  from {
+    transform: rotate(60deg);
+  }
+
+  to {
+    transform: rotate(40deg);
+  }
+}
+
+.home-leaf-animate {
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: homeLeafAnimation;
+}
+
+@keyframes couplePhotoAnimation {
+  from {
+    transform: rotate(3deg);
+  }
+
+  to {
+    transform: rotate(-3deg);
+  }
+}
+
+.couple-photo-animate {
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: couplePhotoAnimation;
+}

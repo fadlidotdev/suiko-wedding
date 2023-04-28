@@ -1,0 +1,59 @@
+import React, { useEffect } from "react";
+import { useAppContext } from "./AppContextProvider";
+import Button from "./Button";
+import Section from "./Section";
+
+const sectionStyle = {
+  background: `
+linear-gradient(
+  to right bottom,
+  rgba(252, 250, 246, 0.9),
+  rgba(209, 217, 223, 0.7)
+),
+url('/bg-welcome-screen.jpg')
+`,
+};
+
+function Welcome({ onOpenInvitation }) {
+  const { search } = window.location;
+  const { visitorName, setVisitorName } = useAppContext();
+
+  useEffect(() => {
+    if (!search) return;
+
+    const searchParams = new URLSearchParams(search);
+    setVisitorName(searchParams.get("name"));
+  }, [search]);
+
+  return (
+    <Section style={sectionStyle}>
+      <div>
+        <h1 className="font-heading text-6xl drop-shadow-xl font-bold">
+          Meylinda <br />
+          &amp;
+          <br /> Rayhan
+        </h1>
+
+        <div className="flex flex-col gap-4 my-8">
+          <span>Bapak/Ibu/Saudara/i</span>
+          <h2 className="text-2xl font-bold">{visitorName}</h2>
+
+          <p className="text-sm">
+            Tanpa mengurangi rasa hormat, kami bermaksud mengundang Anda untuk menghadiri acara
+            pernikahan kami.
+          </p>
+        </div>
+
+        <div className="absolute bottom-8 left-0 right-0 space-y-4">
+          <Button onClick={onOpenInvitation}>Buka Undangan</Button>
+
+          <p>
+            <small>* Mohon maaf apabila ada kesalahan penulisan nama/gelar</small>
+          </p>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+export default Welcome;
