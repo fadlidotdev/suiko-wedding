@@ -1,17 +1,17 @@
-import { useState } from "react";
-import Home from "./components/Home";
-import Welcome from "./components/Welcome";
-import Couple from "./components/Couple";
-import Event from "./components/Event";
-import Gallery from "./components/Gallery";
-import Message from "./components/Message";
-import BottomNav from "./components/BottomNav";
-import AudioPlayer from "./components/AudioPlayer";
-import { useAppContext } from "./components/AppContextProvider";
-import Timeline from "./components/Timeline";
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useEffect, useState } from "react";
+import AudioPlayer from "./components/AudioPlayer";
+import BottomNav from "./components/BottomNav";
+import { useAppContext } from "./contexts/AppContextProvider";
+import Couple from "./screen/Couple";
+import Event from "./screen/Event";
+import Gallery from "./screen/Gallery";
+import HealthProtocal from "./screen/HealthProtocal";
+import Home from "./screen/Home";
+import Message from "./screen/Message";
+import Timeline from "./screen/Timeline";
+import Welcome from "./screen/Welcome";
 
 function App() {
   const [isWelcomeScreen, setIsWelcomeScreen] = useState(true);
@@ -40,7 +40,8 @@ function App() {
           <Gallery />
           <Timeline />
           <Message />
-          <div className="h-[80px] bg-gray-200" />
+          <HealthProtocal />
+          <div className="h-[80px] bg-gray-50" />
         </main>
       )}
     </>

@@ -1,12 +1,10 @@
-import React from "react";
-import Section from "./Section";
-import { useAppContext } from "./AppContextProvider";
-import { supabase } from "../helpers/supabase";
-import { useEffect } from "react";
-import { useState } from "react";
-import Button from "./Button";
+import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import Heading from "./Heading";
+import Button from "../components/Button";
+import Heading from "../components/Heading";
+import Section from "../components/Section";
+import { useAppContext } from "../contexts/AppContextProvider";
+import { supabase } from "../helpers/supabase";
 
 const Comment = ({ name, presence_status, comments }) => (
   <div className="bg-white p-2 shadow rounded text-sm">
@@ -62,13 +60,17 @@ function Message() {
   };
 
   return (
-    <section id="message" className="bg-gray-200 p-5 space-y-5">
+    <Section
+      headerComponent={
+        <header>
+          <Heading>RSUV</Heading>
+          <p>Silahkan konfirmasi kehadiran Anda</p>
+        </header>
+      }
+      id="message"
+      className="bg-gray-200 space-y-5"
+    >
       <Toaster />
-
-      <div className="text-center">
-        <Heading>RSUV</Heading>
-        <p>Silahkan konfirmasi kehadiran Anda</p>
-      </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-2" data-aos="zoom-in">
         <input
@@ -99,14 +101,14 @@ function Message() {
 
       {commentsData.length > 0 && (
         <div className="max-h-56 overflow-auto bg-gray-300 p-4 rounded">
-          <div data-aos="zoom-out" className="flex flex-col gap-2">
+          <div data-aos="zoom-out" className="flex flex-col gap-2 text-left">
             {commentsData?.map((comment) => (
               <Comment key={comment.id} {...comment} />
             ))}
           </div>
         </div>
       )}
-    </section>
+    </Section>
   );
 }
 

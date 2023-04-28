@@ -1,12 +1,19 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-function Section({ children, className, ...otherProps }) {
+function Section({ isFullScreen = true, headerComponent, children, className, ...otherProps }) {
   return (
     <section
-      className="min-h-[100vh] p-5 flex items-center justify-center text-center"
+      className={twMerge(
+        "p-5 flex flex-col items-center justify-center !place-items-stretch text-center",
+        isFullScreen && "min-h-[100vh]",
+        className
+      )}
       {...otherProps}
     >
-      <div className={className}>{children}</div>
+      {headerComponent && <div className="mb-5">{headerComponent}</div>}
+
+      {children}
     </section>
   );
 }

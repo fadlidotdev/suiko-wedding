@@ -1,8 +1,8 @@
 import React from "react";
-import Section from "./Section";
-import Countdown from "./Countdown";
-import Button from "./Button";
-import Heading from "./Heading";
+import Button from "../components/Button";
+import Countdown from "../components/Countdown";
+import Heading from "../components/Heading";
+import Section from "../components/Section";
 
 const marriedDate = new Date("2023-05-24");
 const locationMapLink =
@@ -62,7 +62,7 @@ function Event() {
       <Heading>Acara Kami</Heading>
 
       <div data-aos="flip-right" data-aos-delay="500">
-        <EventItem title="Akad Nikah" timeString="08:00" />
+        <EventItem title="Akad Nikah" timeString="09.00 - 10.00" />
       </div>
 
       <div className="space-y-6">
@@ -84,7 +84,7 @@ function Event() {
       </div>
 
       <div data-aos="flip-right" data-aos-delay="500">
-        <EventItem title="Resepsi" timeString="10:00" />
+        <EventItem title="Intimate Wedding" timeString="11.00 - 13.00" />
       </div>
 
       <div className="space-y-4">

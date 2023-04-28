@@ -1,8 +1,8 @@
-import React from "react";
-import Section from "./Section";
 import "photoswipe/dist/photoswipe.css";
+import React from "react";
 import { Gallery as ImageGallery, Item } from "react-photoswipe-gallery";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
+import Section from "../components/Section";
 
 const sectionStyle = {
   background: `
@@ -19,9 +19,12 @@ url('/bg-gallery-screen.jpg')
 
 function Gallery() {
   return (
-    <Section id="gallery" className="space-y-8" style={sectionStyle}>
-      <Heading>Galeri</Heading>
-
+    <Section
+      id="gallery"
+      headerComponent={<Heading>Galeri</Heading>}
+      className="space-y-8"
+      style={sectionStyle}
+    >
       <div data-aos="zoom-in">
         <ImageGallery>
           <div className="grid grid-cols-2 gap-2 bg-gray-200">

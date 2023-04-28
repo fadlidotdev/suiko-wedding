@@ -1,5 +1,6 @@
 import React from "react";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
+import Section from "../components/Section";
 
 const styleSection = {
   background: `
@@ -18,7 +19,7 @@ const stories = [
     dateString: "15 Maret 2022",
     header: "Awal Perkenalan",
     story: `Kami berteman sudah sejak SMA. Namun baru tahun lalu benar-banar memutuskan untuk komunikasi
-    secara intens. LDR tidak menghalangi kami berkomitmen satu sama lain untuk melangkah ke
+  secara intens. LDR tidak menghalangi kami berkomitmen satu sama lain untuk melangkah ke
     jenjang pernikahan.`,
   },
   {
@@ -34,29 +35,27 @@ const stories = [
 ];
 
 const TimelineItem = ({ dateString, header, story }) => (
-  <li class="mb-10 ml-4">
-    <div class="absolute p-2 bg-gray-200 border-2 border-white rounded-full w-6 h-6 -left-3 flex items-center justify-center">
+  <li className="mb-10 ml-4">
+    <div className="absolute p-2 bg-gray-200 border-2 border-white rounded-full w-6 h-6 -left-3 flex items-center justify-center">
       <span className="material-icons text-sm">favorite</span>
     </div>
-    <time class="mb-1 text-sm font-normal leading-none text-gray-400">{dateString}</time>
-    <h3 class="text-lg font-semibold text-dark">{header}</h3>
-    <p class="mb-4 text-sm font-normal text-gray-600">{story}</p>
+    <time className="mb-1 text-sm font-normal leading-none text-gray-400">{dateString}</time>
+    <h3 className="text-lg font-semibold text-dark">{header}</h3>
+    <p className="mb-4 text-sm font-normal text-gray-600">{story}</p>
   </li>
 );
 
 function Timeline() {
   return (
-    <section className="p-5 space-y-5" style={styleSection}>
-      <Heading>Cerita Cinta</Heading>
-
-      <ol class="relative border-l border-gray-300">
+    <Section headerComponent={<Heading>Cerita Cinta</Heading>} style={styleSection}>
+      <ol className="relative border-l border-gray-300 text-left">
         {stories.map((story) => (
           <div key={story.header} data-aos="fade-in" data-aos-delay="200">
             <TimelineItem {...story} />
           </div>
         ))}
       </ol>
-    </section>
+    </Section>
   );
 }
 

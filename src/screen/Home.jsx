@@ -1,6 +1,5 @@
 import React from "react";
-import Section from "./Section";
-import { useAppContext } from "./AppContextProvider";
+import Section from "../components/Section";
 
 const styleSection = {
   background: `
@@ -12,6 +11,7 @@ rgba(209, 217, 223, 0.7)
 url('/bg-home-screen.jpg')
 `,
   backgroundSize: "cover",
+  backgroundPositionX: "center",
 };
 
 function Home() {
@@ -41,7 +41,7 @@ function Home() {
           </div>
         </div>
 
-        <p>We invited you to celebrate our wedding</p>
+        <p className="text-base">We invited you to celebrate our wedding</p>
       </div>
     </Section>
   );

@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
 import PropTypes from "prop-types";
-import { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 function AudioPlayer({ isPlay = false, src, children }) {
   const audioRef = useRef(null);
