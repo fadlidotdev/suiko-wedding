@@ -97,13 +97,15 @@ function Message() {
         </Button>
       </form>
 
-      <div className="max-h-56 overflow-auto bg-gray-300 p-4 rounded">
-        <div data-aos="zoom-out" className="flex flex-col gap-2">
-          {commentsData?.map((comment) => (
-            <Comment key={comment.id} {...comment} />
-          ))}
+      {commentsData.length > 0 && (
+        <div className="max-h-56 overflow-auto bg-gray-300 p-4 rounded">
+          <div data-aos="zoom-out" className="flex flex-col gap-2">
+            {commentsData?.map((comment) => (
+              <Comment key={comment.id} {...comment} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
