@@ -48,7 +48,7 @@ function Message() {
 
     await supabase.from("comments").insert([
       {
-        name: visitorName,
+        name: visitorName || name,
         comments,
         presence_status: parseInt(presenceStatus),
       },

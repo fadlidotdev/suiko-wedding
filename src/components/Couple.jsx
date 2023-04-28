@@ -33,6 +33,8 @@ function Couple() {
           className="h-full w-full mx-auto couple-photo-animate"
           data-aos="fade-in"
           data-aos-delay="500"
+          height="200"
+          width="300"
         />
       </div>
 
