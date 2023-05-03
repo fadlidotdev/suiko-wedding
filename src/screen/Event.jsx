@@ -14,7 +14,7 @@ const addToCalendarLink =
 const locationIframeSrc =
   "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3959.4111125356176!2d110.3379853!3d-7.0782443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7089e6d3d405e3%3A0x96a11f15e11b072!2sNirwana%20Stable!5e0!3m2!1sen!2sid!4v1682641599633!5m2!1sen!2sid";
 
-const EventItem = ({ title, timeString }) => {
+const EventItem = ({ title, timeString, children }) => {
   return (
     <div className="bg-white/50 rounded p-6 shadow-lg space-y-6">
       <div className="space-y-2">
@@ -29,6 +29,8 @@ const EventItem = ({ title, timeString }) => {
           </div>
           <span className="text-sm mt-4 block">Pukul {timeString} WIB</span>
         </div>
+
+        {children}
       </div>
     </div>
   );
@@ -84,7 +86,9 @@ function Event() {
       </div>
 
       <div data-aos="flip-right" data-aos-delay="500">
-        <EventItem title="Intimate Wedding" timeString="11.00 - 13.00" />
+        <EventItem title="Intimate Wedding" timeString="11.00 - 13.00">
+          <p className="font-bold">( Outdoor Party )</p>
+        </EventItem>
       </div>
 
       <div className="space-y-4">
