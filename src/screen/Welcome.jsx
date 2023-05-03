@@ -29,7 +29,7 @@ function Welcome({ onOpenInvitation }) {
     <Section style={sectionStyle}>
       <div>
         <h1 className="font-heading text-6xl drop-shadow-xl font-bold">
-          Meylinda <br />
+          Meilynda <br />
           &amp;
           <br /> Rayhan
         </h1>

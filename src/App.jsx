@@ -12,6 +12,7 @@ import Home from "./screen/Home";
 import Message from "./screen/Message";
 import Timeline from "./screen/Timeline";
 import Welcome from "./screen/Welcome";
+import Dua from "./screen/Dua";
 
 function App() {
   const [isWelcomeScreen, setIsWelcomeScreen] = useState(true);
@@ -37,8 +38,9 @@ function App() {
           <Home />
           <Couple />
           <Event />
-          <Gallery />
           <Timeline />
+          <Gallery />
+          <Dua />
           <Message />
           <HealthProtocal />
           <div className="h-[80px] bg-gray-50" />
