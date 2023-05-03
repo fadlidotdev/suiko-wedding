@@ -28,23 +28,25 @@ function Welcome({ onOpenInvitation }) {
   return (
     <Section style={sectionStyle}>
       <div>
-        <h1 className="font-heading text-6xl drop-shadow-xl font-bold">
-          Meilynda <br />
-          &amp;
-          <br /> Rayhan
-        </h1>
+        <div className="relative -top-16">
+          <h1 className="font-heading text-6xl drop-shadow-xl font-bold">
+            Meilynda <br />
+            &amp;
+            <br /> Rayhan
+          </h1>
 
-        <div className="flex flex-col gap-4 my-8">
-          <span>Bapak/Ibu/Saudara/i</span>
-          <h2 className="text-2xl font-bold">{visitorName}</h2>
+          <div className="flex flex-col gap-4 my-8">
+            <span>Bapak/Ibu/Saudara/i</span>
+            <h2 className="text-2xl font-bold">{visitorName}</h2>
 
-          <p className="text-sm">
-            Tanpa mengurangi rasa hormat, kami bermaksud mengundang Anda untuk menghadiri acara
-            pernikahan kami.
-          </p>
+            <p className="text-sm">
+              Tanpa mengurangi rasa hormat, kami bermaksud mengundang Anda untuk menghadiri acara
+              pernikahan kami.
+            </p>
+          </div>
         </div>
 
-        <div className="absolute bottom-8 left-0 right-0 space-y-4">
+        <div className="absolute bottom-4 left-0 right-0 space-y-4">
           <Button onClick={onOpenInvitation}>Buka Undangan</Button>
 
           <p>
