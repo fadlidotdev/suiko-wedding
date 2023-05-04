@@ -20,7 +20,7 @@ function Home() {
       <div className="flex flex-col gap-6">
         <div className="font-heading">
           <h2 className="text-6xl leading-[56px] font-bold drop-shadow-xl" data-aos="zoom-in">
-            Meylinda <br />
+            Meilynda <br />
             &amp;
             <br /> Rayhan
           </h2>
