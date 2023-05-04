@@ -78,7 +78,7 @@ function Event() {
             </div>
           )}
         </Countdown>
-        <Button className="bg-gray-400">
+        <Button>
           <a target="_blank" href={addToCalendarLink}>
             Ingatkan Saya
           </a>
