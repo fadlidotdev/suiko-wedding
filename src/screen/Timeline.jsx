@@ -18,7 +18,7 @@ const stories = [
   {
     dateString: "15 Maret 2022",
     header: "Awal Perkenalan",
-    story: `Kami berteman sudah sejak SMA. Namun baru tahun lalu benar-banar memutuskan untuk komunikasi
+    story: `Kami berteman sudah sejak SMA. Namun baru tahun lalu benar-benar memutuskan untuk komunikasi
   secara intens. LDR tidak menghalangi kami berkomitmen satu sama lain untuk melangkah ke
     jenjang pernikahan.`,
   },
