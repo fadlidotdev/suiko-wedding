@@ -30,18 +30,18 @@ const stories = [
   {
     dateString: "27 Mei 2023",
     header: "Pernikahan",
-    story: `Tanggal 27 Mei 2023 menjadi hari yang special bagi kami. Insya Allah kami akan melangsungkan pernikahan. Mohon doa restunya semoga acara berlangsung sukses & lancar tanpa ada halangan dan rintangan. Aamiin`,
+    story: `Tgl 27 mei 2023 Insya  Allah akan menjadi hari yang spesial bagi kami,dimana kami akan mengucapkan janji suci di hadapan Allah SWT untuk menjadi sepasang suami istri. Mohon doa restunya semoga pernikahan kami mendapat ridho Allah SWT  dan acara dapat berjalan dengan lancar tanpa ada halangan & rintangan. Aamiin`,
   },
 ];
 
 const TimelineItem = ({ dateString, header, story }) => (
   <li className="mb-10 ml-4">
     <div className="absolute p-2 bg-gray-200 border-2 border-white rounded-full w-6 h-6 -left-3 flex items-center justify-center">
-      <span className="material-icons text-sm">favorite</span>
+      <span className="material-icons text-sm text-[#758e74]">favorite</span>
     </div>
     <time className="mb-1 text-sm font-normal leading-none text-gray-400">{dateString}</time>
     <h3 className="text-lg font-semibold text-dark">{header}</h3>
-    <p className="mb-4 text-sm font-normal text-gray-600">{story}</p>
+    <p className="mb-4 text-sm font-normal">{story}</p>
   </li>
 );
 

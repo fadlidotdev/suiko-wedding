@@ -19,14 +19,12 @@ function Dua() {
     <Section id="dua" style={sectionStyle}>
       <div data-aos="zoom-in" className="space-y-4">
         <p className="text-lg">
-          Merupakan suatu kehormatan dan kebahagiaan bagi kami. apabila bapak/ibu/saudara(i)
-          berkenan hadir untuk memberikan do'a restu kepada kedua mempelai, Atas kehadiran dan doa
-          restu nya kami ucapkan terimakasih
+          Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu
+          dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
+          menjadikan di antaramu rasa kasih dan sayang.
         </p>
 
-        <p className="text-lg">
-          Wassalamualaikum <br /> warahmatullahi wabarakatuh
-        </p>
+        <p className="text-md">-QS Ar-Rum Ayat 21-</p>
       </div>
     </Section>
   );

@@ -32,7 +32,7 @@ function Couple() {
     >
       <div className="bg-white/50 p-4 w-80 mx-auto shadow-xl">
         <img
-          src="/images/gallery-05.jpg"
+          src="/images/gallery-06.jpg"
           alt=""
           className="h-full w-full mx-auto couple-photo-animate"
           data-aos="fade-in"

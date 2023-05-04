@@ -8,7 +8,7 @@ html {
 
 .font-heading {
   font-family: 'Alex Brush', cursive;
-  @apply text-[#171717];
+  @apply text-[#797a6c];
 }
 
 .font-body {
@@ -16,12 +16,12 @@ html {
 }
 
 .text-dark {
-  @apply text-[#171717];
+  @apply text-[#797a6c];
 }
 
 body {
   font-family: 'Lora', serif;
-  @apply text-gray-700;
+  @apply text-[#797a6c];
 }
 
 p {

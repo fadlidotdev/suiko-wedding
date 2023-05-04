@@ -13,6 +13,7 @@ import Message from "./screen/Message";
 import Timeline from "./screen/Timeline";
 import Welcome from "./screen/Welcome";
 import Dua from "./screen/Dua";
+import SpecialInvite from "./screen/SpecialInvite";
 
 function App() {
   const [isWelcomeScreen, setIsWelcomeScreen] = useState(true);
@@ -42,6 +43,7 @@ function App() {
           <Gallery />
           <Dua />
           <Message />
+          <SpecialInvite />
           <HealthProtocal />
           <div className="h-[80px] bg-gray-50" />
         </main>

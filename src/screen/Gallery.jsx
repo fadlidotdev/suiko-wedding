@@ -22,12 +22,12 @@ function Gallery() {
     <Section
       id="gallery"
       headerComponent={<Heading>Galeri</Heading>}
-      className="space-y-8"
+      className="space-y-4"
       style={sectionStyle}
     >
       <div data-aos="zoom-in">
         <ImageGallery>
-          <div className="grid grid-cols-2 gap-2 bg-gray-200">
+          <div className="grid grid-cols-2 gap-2 bg-gray-200 min-h-[736px]">
             <Item
               original="/images/gallery-01.jpg"
               thumbnail="/images/gallery-01.jpg"

@@ -6,7 +6,7 @@ const iconClassName = "text-2xl";
 function BottomNav() {
   return (
     <div className="fixed bottom-4 w-full px-4 z-50">
-      <div className="rounded bg-white/75 border-2 border-gray-400 text-gray-500 h-[65px]  flex items-center justify-around">
+      <div className="rounded bg-white/75 border-2 border-gray-400 h-[65px]  flex items-center justify-around">
         <a className={linkClassName} href="#home">
           <span className={`material-icons ${iconClassName}`}>home</span>
           Home
