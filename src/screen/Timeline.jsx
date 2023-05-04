@@ -37,7 +37,7 @@ const stories = [
 const TimelineItem = ({ dateString, header, story }) => (
   <li className="mb-10 ml-4">
     <div className="absolute p-2 bg-gray-200 border-2 border-white rounded-full w-6 h-6 -left-3 flex items-center justify-center">
-      <span className="material-icons text-sm text-[#758e74]">favorite</span>
+      <span className="material-icons text-sm text-[#cf1c49]">favorite</span>
     </div>
     <time className="mb-1 text-sm font-normal leading-none text-gray-400">{dateString}</time>
     <h3 className="text-lg font-semibold text-dark">{header}</h3>
