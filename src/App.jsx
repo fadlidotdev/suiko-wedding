@@ -14,6 +14,7 @@ import Timeline from "./screen/Timeline";
 import Welcome from "./screen/Welcome";
 import Dua from "./screen/Dua";
 import SpecialInvite from "./screen/SpecialInvite";
+import PlayStopSound from "./components/PlayStopSound";
 
 function App() {
   const [isWelcomeScreen, setIsWelcomeScreen] = useState(true);
@@ -35,6 +36,7 @@ function App() {
         <Welcome onOpenInvitation={handleOpenInvitation} />
       ) : (
         <main>
+          <PlayStopSound />
           <BottomNav />
           <Home />
           <Couple />

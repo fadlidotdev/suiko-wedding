@@ -24,7 +24,7 @@ function Dua() {
           menjadikan di antaramu rasa kasih dan sayang.
         </p>
 
-        <p className="text-md">-QS Ar-Rum Ayat 21-</p>
+        <p className="text-lg font-semibold">-QS Ar-Rum Ayat 21-</p>
       </div>
     </Section>
   );

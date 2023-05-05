@@ -21,21 +21,25 @@ function SpecialInvite() {
       style={sectionStyle}
       headerComponent={<Heading>Turut Mengundang</Heading>}
     >
-      <div data-aos="zoom-in" className="space-y-4">
-        <p>
+      <div data-aos="zoom-in" className="space-y-4 mb-8">
+        <p className="text-base">
           Keluarga Besar mempelai Wanita <br />
           Keluarga Besar Mempelai Pria
         </p>
 
-        <p>
+        <p className="text-base">
           Atas kehadiran dan do'a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan Terima
           Kasih.
         </p>
 
-        <p>Wassalamu'alaikum Wr.Wb.</p>
+        <p className="text-base">Wassalamu'alaikum Wr.Wb.</p>
 
-        <p className="text-lg font-bold">Meilynda & Rayhan</p>
+        {/* <p className="text-lg font-bold">Meilynda & Rayhan</p> */}
       </div>
+
+      <h2 className="text-xl font-bold drop-shadow-xl font-heading" data-aos="zoom-in">
+        Meilynda &amp; Rayhan
+      </h2>
     </Section>
   );
 }

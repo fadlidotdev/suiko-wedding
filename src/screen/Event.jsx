@@ -5,8 +5,7 @@ import Heading from "../components/Heading";
 import Section from "../components/Section";
 
 const marriedDate = new Date("2023-05-24");
-const locationMapLink =
-  "https://www.google.com/maps/place/MASJID+AGUNG+AT-TAQWA/@-3.8001466,102.2564691,17z/data=!4m6!3m5!1s0x2e36b018d42ffc83:0x47a42b6349b7762d!8m2!3d-3.8001466!4d102.2590494!16s%2Fg%2F15dpld3x";
+const locationMapLink = "https://maps.app.goo.gl/wcN5dyqZJBgPHW116?g_st=it";
 
 const addToCalendarLink =
   "https://calendar.google.com/calendar/u/0/r/eventedit?text=Wedding+Fadli-Nova&details&dates=20230524/20230524&location=Restoran+hidden,+Sekolah+Berkuda,+Wedding+Venue+Jawa+Tengah+(Nirwana+Stable)";

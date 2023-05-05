@@ -8,6 +8,7 @@ html {
 
 .font-heading {
   font-family: 'Alex Brush', cursive;
+  text-shadow: 1px 1px #e6da98;
   @apply text-[#797a6c];
 }
 

@@ -8,8 +8,13 @@ function AudioPlayer({ isPlay = false, src, children }) {
     audioRef.current.play();
   };
 
+  const pauseAudio = () => {
+    audioRef.current.pause();
+  };
+
   useEffect(() => {
     if (isPlay) playAudio();
+    else pauseAudio();
   }, [isPlay]);
 
   return (
