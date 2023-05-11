@@ -79,15 +79,17 @@ function Message() {
           type="text"
           name="name"
           placeholder="Nama"
+          required
           value={visitorName || name}
           onChange={handleChangeName}
         />
         <textarea
           className="p-2"
           rows="10"
-          onChange={handleChangeGreetings}
+          required
           value={comments}
           placeholder="Berikan Ucapan Dan Doa restu"
+          onChange={handleChangeGreetings}
         ></textarea>
         <select className="p-2" onChange={handleChangePresence}>
           <option value="1">Hadir</option>
