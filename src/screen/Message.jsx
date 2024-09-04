@@ -4,11 +4,10 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Section from "../components/Section";
 import { useAppContext } from "../contexts/AppContextProvider";
-import { supabase } from "../helpers/supabase";
 
 const Comment = ({ name, presence_status, comments }) => (
-  <div className="bg-white p-2 shadow rounded text-sm">
-    <div className="flex gap-1 items-center">
+  <div className="p-2 text-sm bg-white rounded shadow">
+    <div className="flex items-center gap-1">
       <span className="font-semibold">{name}</span>
       <span>{presence_status === 1 && "✅"}</span>
     </div>
@@ -28,35 +27,35 @@ function Message() {
   const handleChangePresence = (event) => setPresenceStatus(parseInt(event.target.value));
   const handleChangeName = (event) => setName(event.target.value);
 
-  const fetchComments = async () => {
-    const response = await supabase
-      .from("comments")
-      .select("*")
-      .order("created_at", { ascending: false });
+  // const fetchComments = async () => {
+  //   const response = await supabase
+  //     .from("comments")
+  //     .select("*")
+  //     .order("created_at", { ascending: false });
 
-    setCommentsData(response.data);
-  };
+  //   setCommentsData(response.data);
+  // };
 
-  useEffect(() => {
-    fetchComments();
-  }, []);
+  // useEffect(() => {
+  //   fetchComments();
+  // }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await supabase.from("comments").insert([
-      {
-        name: visitorName || name,
-        comments,
-        presence_status: parseInt(presenceStatus),
-      },
-    ]);
+    // await supabase.from("comments").insert([
+    //   {
+    //     name: visitorName || name,
+    //     comments,
+    //     presence_status: parseInt(presenceStatus),
+    //   },
+    // ]);
 
     toast.success("RSUP berhasil dikirim");
     setComments("");
     setPresenceStatus(1);
 
-    fetchComments();
+    // fetchComments();
   };
 
   return (
@@ -68,7 +67,7 @@ function Message() {
         </header>
       }
       id="message"
-      className="bg-gray-200 space-y-5"
+      className="space-y-5 bg-gray-200"
     >
       <Toaster />
 
@@ -96,13 +95,13 @@ function Message() {
           <option value="0">Tidak Hadir</option>
         </select>
 
-        <Button className="mt-2 w-auto flex-shrink-0 self-start" type="submit">
+        <Button className="self-start flex-shrink-0 w-auto mt-2" type="submit">
           Kirimkan Ucapan
         </Button>
       </form>
 
       {commentsData.length > 0 && (
-        <div className="max-h-56 overflow-auto bg-gray-300 p-4 rounded">
+        <div className="p-4 overflow-auto bg-gray-300 rounded max-h-56">
           <div data-aos="zoom-out" className="flex flex-col gap-2 text-left">
             {commentsData?.map((comment) => (
               <Comment key={comment.id} {...comment} />

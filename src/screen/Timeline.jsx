@@ -36,7 +36,7 @@ const stories = [
 
 const TimelineItem = ({ dateString, header, story }) => (
   <li className="mb-10 ml-4">
-    <div className="absolute p-2 bg-gray-200 border-2 border-white rounded-full w-6 h-6 -left-3 flex items-center justify-center">
+    <div className="absolute flex items-center justify-center w-6 h-6 p-2 bg-gray-200 border-2 border-white rounded-full -left-3">
       <span className="material-icons text-sm text-[#cf1c49]">favorite</span>
     </div>
     <time className="mb-1 text-sm font-normal leading-none text-gray-400">{dateString}</time>
@@ -48,8 +48,8 @@ const TimelineItem = ({ dateString, header, story }) => (
 function Timeline() {
   return (
     <Section headerComponent={<Heading>Cerita Cinta</Heading>} style={styleSection}>
-      <ol className="relative border-l border-gray-300 text-left">
-        {stories.map((story) => (
+      <ol className="relative text-left border-l border-gray-300">
+        {stories?.map((story) => (
           <div key={story.header} data-aos="fade-in" data-aos-delay="200">
             <TimelineItem {...story} />
           </div>
